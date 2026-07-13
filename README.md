@@ -26,13 +26,21 @@
 - 期货曲线实验室：用持有成本与便利收益解释 Contango 和 Backwardation
 - 3-2-1裂解价差工具：统一原油与成品油单位，观察炼厂毛加工空间
 - 中国行业传导矩阵：区分需求推动、供应中断、供给过剩与需求崩塌
+- 2010—2025数据长镜头：全球供需、OECD商业库存与OPEC剩余产能
+- 美国供给响应长图：对照WTI年度均价与美国原油产量
+- 四家公司年度快照：中国海油、中国石化、ExxonMobil与SLB
+- 全站可读性下限：辅助文字不低于10px，正文型注释提升至11—12px
 
 ## 本地运行
 
 ```bash
 npm install
-npm run dev
+npm start
 ```
+
+启动后访问：`http://127.0.0.1:1973/`
+
+`npm run dev` 使用相同的固定地址；如果1973端口已被占用，Vite会直接报错，不会自动切换端口。
 
 生产构建：
 
@@ -45,10 +53,10 @@ npm run build
 低频事实和教学参数集中在 `src/data/`，主要包括：
 
 - [`src/data/content.ts`](src/data/content.ts)：咽喉流量、一桶油课程、公司类型与通用来源
-- [`src/data/hormuzDossier.ts`](src/data/hormuzDossier.ts)：霍尔木兹专题情景、管道与验证信号
-- [`src/data/crudeSystem.ts`](src/data/crudeSystem.ts)：原油指纹、炼厂、基准油与到岸成本
-- [`src/data/oilHistory.ts`](src/data/oilHistory.ts)：七次历史冲击的统一比较框架
+- [`src/data/hormuz.ts`](src/data/hormuz.ts)：霍尔木兹专题情景、管道与验证信号
+- [`src/data/crudeSystem.ts`](src/data/crudeSystem.ts)：原油指纹、炼厂、基准油、到岸成本与七次历史冲击
 - [`src/data/marketMechanics.ts`](src/data/marketMechanics.ts)：供需预设、市场情景、行业利润映射与本章来源
+- [`src/data/historicalData.ts`](src/data/historicalData.ts)：年度市场序列、公司快照与数据来源
 
 需要更新数字时，应同步修改数据年份、来源说明和页面展示，避免只替换数字而保留旧口径。
 
@@ -59,6 +67,7 @@ npm run build
 - [`docs/研究素材映射.md`](docs/研究素材映射.md)：旧研究库如何转化为网站长期内容
 - [`docs/原油炼化与历史来源.md`](docs/原油炼化与历史来源.md)：第三阶段调研口径与模型边界
 - [`docs/市场结构与行业传导.md`](docs/市场结构与行业传导.md)：第四阶段公式、情景与行业映射边界
+- [`docs/历史数据与年度快照.md`](docs/历史数据与年度快照.md)：第五阶段序列口径、公司数据与更新规则
 - [`CREDITS.md`](CREDITS.md)：视觉素材来源与授权信息
 
 ## 技术栈

@@ -13,6 +13,7 @@ import { ChokepointMap } from './components/ChokepointMap'
 import { CrudeRefineryChapter } from './components/CrudeRefineryChapter'
 import { ElasticityLab } from './components/ElasticityLab'
 import { Hero } from './components/Hero'
+import { HistoricalDataChapter } from './components/HistoricalDataChapter'
 import { HormuzDossier } from './components/HormuzDossier'
 import { MarketMechanicsChapter } from './components/MarketMechanicsChapter'
 import { OilJourney } from './components/OilJourney'
@@ -109,7 +110,7 @@ function InvestorSection({ deepRead }: { deepRead: boolean }) {
       <div className="shell">
         <div className="section-heading">
           <div>
-            <div className="eyebrow">08 / 投资者框架</div>
+            <div className="eyebrow">09 / 投资者框架</div>
             <h2>不要从股票代码开始，<br />从变量开始。</h2>
           </div>
           <p>
@@ -294,6 +295,7 @@ function App() {
         <ChokepointMap />
         <ElasticityLab />
         <MarketMechanicsChapter />
+        <HistoricalDataChapter />
         <OilHistoryTimeline />
         <InvestorSection deepRead={deepRead} />
         <CurriculumSection />

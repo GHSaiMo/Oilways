@@ -18,7 +18,7 @@ export function OilHistoryTimeline() {
       <div className="history-intro">
         <div className="shell history-intro-layout">
           <div>
-            <div className="eyebrow eyebrow-light">07 / 石油危机史</div>
+            <div className="eyebrow eyebrow-light">08 / 石油危机史</div>
             <h2>石油危机，<br />从来不只有一种。</h2>
           </div>
           <div>

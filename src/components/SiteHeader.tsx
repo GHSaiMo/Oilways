@@ -11,6 +11,7 @@ const navItems = [
   ['霍尔木兹专题', '#hormuz-dossier'],
   ['原油与炼厂', '#crude-refinery'],
   ['市场结构', '#market-mechanics'],
+  ['数据长图', '#historical-data'],
   ['历史周期', '#oil-history'],
   ['投资框架', '#investing'],
 ]
