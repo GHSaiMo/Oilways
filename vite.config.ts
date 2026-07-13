@@ -8,10 +8,12 @@ export default defineConfig({
     host: '127.0.0.1',
     port: 1973,
     strictPort: true,
+    allowedHosts: ['oilways.jiuge.space'],
   },
   preview: {
     host: '127.0.0.1',
     port: 1973,
     strictPort: true,
+    allowedHosts: ['oilways.jiuge.space'],
   },
 })

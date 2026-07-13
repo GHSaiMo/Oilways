@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="油脉">
+  <rect width="64" height="64" rx="8" fill="#0b0f10"/>
+  <path d="M12 46h9l5-16h-9z" fill="#ef6334"/>
+  <path d="M25 46h9l8-26h-9z" fill="#ef6334"/>
+  <path d="M38 46h9l10-34h-9z" fill="#ef6334"/>
+</svg>
