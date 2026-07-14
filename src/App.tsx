@@ -8,10 +8,10 @@ import {
   Info,
   Layers3,
 } from 'lucide-react'
-import { useState } from 'react'
 import { ChokepointMap } from './components/ChokepointMap'
 import { CrudeRefineryChapter } from './components/CrudeRefineryChapter'
 import { ElasticityLab } from './components/ElasticityLab'
+import { EscalationTrapDossier } from './components/EscalationTrapDossier'
 import { Hero } from './components/Hero'
 import { HistoricalDataChapter } from './components/HistoricalDataChapter'
 import { HormuzDossier } from './components/HormuzDossier'
@@ -27,7 +27,7 @@ import {
   sources,
 } from './data/content'
 
-function ImpactSection({ deepRead }: { deepRead: boolean }) {
+function ImpactSection() {
   const chain = [
     ['01', '物理供应', '油轮等待、绕航，部分出口难以离开波斯湾'],
     ['02', '现货市场', '可立即交付的原油减少，区域升贴水先行变化'],
@@ -60,17 +60,15 @@ function ImpactSection({ deepRead }: { deepRead: boolean }) {
           ))}
         </div>
 
-        {deepRead && (
-          <div className="deep-read-note">
-            <Info size={18} />
-            <div>
-              <strong>深读提示：先区分流量与存量</strong>
-              <p>
-                海峡流量中断不会让终端供应在同一天归零。海上浮仓、商业库存、战略储备、可替代管道与炼厂原料结构决定了冲击的时序。持续时间往往比标题中的“是否封锁”更重要。
-              </p>
-            </div>
+        <div className="deep-read-note">
+          <Info size={18} />
+          <div>
+            <strong>分析提示：先区分流量与存量</strong>
+            <p>
+              海峡流量中断不会让终端供应在同一天归零。海上浮仓、商业库存、战略储备、可替代管道与炼厂原料结构决定了冲击的时序。持续时间往往比标题中的“是否封锁”更重要。
+            </p>
           </div>
-        )}
+        </div>
 
         <div className="life-layout">
           <div className="life-image">
@@ -104,7 +102,7 @@ function ImpactSection({ deepRead }: { deepRead: boolean }) {
   )
 }
 
-function InvestorSection({ deepRead }: { deepRead: boolean }) {
+function InvestorSection() {
   return (
     <section className="investor-section" id="investing">
       <div className="shell">
@@ -177,17 +175,15 @@ function InvestorSection({ deepRead }: { deepRead: boolean }) {
           </div>
         </div>
 
-        {deepRead && (
-          <div className="deep-read-note deep-read-note-dark">
-            <Layers3 size={18} />
-            <div>
-              <strong>三种“成本”不能混用</strong>
-              <p>
-                举升成本只反映已有产量的日常运营；完整周期盈亏平衡还包括勘探、开发和资本回报；产油国财政盈亏平衡则回答政府预算需要多高油价。它们属于不同问题。
-              </p>
-            </div>
+        <div className="deep-read-note deep-read-note-dark">
+          <Layers3 size={18} />
+          <div>
+            <strong>三种“成本”不能混用</strong>
+            <p>
+              举升成本只反映已有产量的日常运营；完整周期盈亏平衡还包括勘探、开发和资本回报；产油国财政盈亏平衡则回答政府预算需要多高油价。它们属于不同问题。
+            </p>
           </div>
-        )}
+        </div>
       </div>
     </section>
   )
@@ -201,7 +197,7 @@ function CurriculumSection() {
           <div className="eyebrow eyebrow-light">完整知识路线</div>
           <h2>从生活常识，<br />走到投资推演。</h2>
           <p>
-            八个模块既能从头学习，也能在新闻发生时单独查询。每个模块都遵循“先结论、再机制、后数据”的三层结构。
+            九个模块既能从头学习，也能在新闻发生时单独查询。每个模块都遵循“先结论、再机制、后数据”的三层结构。
           </p>
           <a className="button button-ghost-light" href="#sources">
             查看方法与来源
@@ -281,14 +277,12 @@ function Footer() {
 }
 
 function App() {
-  const [deepRead, setDeepRead] = useState(false)
-
   return (
-    <div className={deepRead ? 'app deep-mode' : 'app'}>
-      <SiteHeader deepRead={deepRead} onDeepReadChange={setDeepRead} />
+    <div className="app">
+      <SiteHeader />
       <main>
         <Hero />
-        <ImpactSection deepRead={deepRead} />
+        <ImpactSection />
         <HormuzDossier />
         <OilJourney />
         <CrudeRefineryChapter />
@@ -297,7 +291,8 @@ function App() {
         <MarketMechanicsChapter />
         <HistoricalDataChapter />
         <OilHistoryTimeline />
-        <InvestorSection deepRead={deepRead} />
+        <InvestorSection />
+        <EscalationTrapDossier />
         <CurriculumSection />
         <SourcesSection />
       </main>

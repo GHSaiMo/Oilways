@@ -1,11 +1,6 @@
 import { Menu, X } from 'lucide-react'
 import { useState } from 'react'
 
-type SiteHeaderProps = {
-  deepRead: boolean
-  onDeepReadChange: (value: boolean) => void
-}
-
 const navItems = [
   ['一桶油', '#journey'],
   ['霍尔木兹专题', '#hormuz-dossier'],
@@ -14,9 +9,10 @@ const navItems = [
   ['数据长图', '#historical-data'],
   ['历史周期', '#oil-history'],
   ['投资框架', '#investing'],
+  ['升级陷阱', '#escalation-trap'],
 ]
 
-export function SiteHeader({ deepRead, onDeepReadChange }: SiteHeaderProps) {
+export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
@@ -40,22 +36,6 @@ export function SiteHeader({ deepRead, onDeepReadChange }: SiteHeaderProps) {
       </nav>
 
       <div className="header-actions">
-        <div className="mode-switch" aria-label="阅读深度">
-          <button
-            className={!deepRead ? 'is-active' : ''}
-            type="button"
-            onClick={() => onDeepReadChange(false)}
-          >
-            叙事
-          </button>
-          <button
-            className={deepRead ? 'is-active' : ''}
-            type="button"
-            onClick={() => onDeepReadChange(true)}
-          >
-            深读
-          </button>
-        </div>
         <button
           className="menu-button"
           type="button"
